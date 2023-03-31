@@ -1,0 +1,11 @@
+python3.6 train_attn_dict.py --trainRoot ../Dataset/Tamil/Tamil_train \
+--valRoot ../Dataset/Tamil/Tamil_val/ \
+--lan tamil \
+--charlist ./tamil_characters.txt \
+--batchSize 64 --nepoch 15 \
+--expr_dir ./Tamil_output \ 
+--adadelta --nh 256 \
+--displayInterval 1000 --valInterval 10000 \ 
+--manualSeed 1234 --random_sample --cuda \
+--dict Tamil_candidates.txt --candidates 10 \
+--pretrained \

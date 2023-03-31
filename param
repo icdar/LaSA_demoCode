@@ -1,0 +1,24 @@
+# about data and net
+manualSeed = 1234 # reproduce experiemnt
+random_sample = True # whether to sample the dataset with random sampler
+nh = 256 # size of the lstm hidden state
+nc = 1
+pretrained = '' # path to pretrained model (to continue training)
+expr_dir = './output' # where to store samples and models
+
+# hardware
+cuda = True # enables cuda
+multi_gpu = False # whether to use multi gpu
+ngpu = 1 # number of GPUs to use. Do remember to set multi_gpu to True!
+workers = 0 # number of data loading workers
+
+# training process
+displayInterval = 1000 # interval to be print the train loss
+valInterval = 10000 # interval to val the model loss and accuray
+saveInterval = 10000 # interval to save model
+n_val_disp = 10 # number of samples to display when val the model
+
+# finetune
+nepoch = 15 # number of epochs to train for
+batchSize = 64 # input batch size
+adadelta = True # whether to use adadelta
